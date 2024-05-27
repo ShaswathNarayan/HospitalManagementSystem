@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details Form</title>
+    <link rel="stylesheet" href="patientform.css">
+</head>
+<body>
+    <h2>Patient Registration Form</h2>
+    <form id="PatientForm">
+        <input type="hidden" id="patientId" name="patientId">
+        <input type="hidden" id="doctorId" name="doctorId"> <!-- Hidden field for doctorId -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+    
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="0"><br>
+    
+        <label for="bloodgroup">Blood Group:</label>
+        <select id="bloodgroup" name="bloodgroup" required>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+ve">AB+ve</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select><br>
+    
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+    
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" required pattern="\d{10}"><br>
+    
+        <button type="submit">Submit</button>
+        <button type="button" id="appointmentButton">Book Appointment</button><br><br>
+    </form>
+    
+    <h2>Patient Info</h2>
+    <div>
+        <h1>Patient Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Patient Age</th>
+                    <th>Patient Blood Group</th>
+                    <th>Patient Gender</th>
+                    <th>Patient Contact</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="patientform.js"></script>
+</body>
+</html>

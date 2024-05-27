@@ -1,0 +1,46 @@
+/* Reset default margins and paddings */
+body, h2, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font and background for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+/* Style the heading */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Style table headers and cells */
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Style the table header background */
+table thead {
+    background-color: #f0f0f0;
+}
+
+/* Center align the last column */
+table th:last-child, table td:last-child {
+    text-align: center;
+}
+
+/* Add hover effect on table rows */
+table tbody tr:hover {
+    background-color: #f0f0f0;
+}

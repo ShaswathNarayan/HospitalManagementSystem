@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Page</title>
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    <h1>Book an Appointment</h1>
+
+    <h2>Available Time Slots</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Availability DateTime</th>
+                <th>Is Available</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="availabilityTableBody">
+            <!-- Availability data will be inserted here -->
+        </tbody>
+    </table>
+    <h2>Make an Appointment</h2>
+    <form id="appointmentForm" onsubmit="makeAppointment(event)">
+        <input type="hidden" id="doctorId" name="doctorId">
+        <input type="hidden" id="patientId" name="patientId">
+        <input type="hidden" id="appointmentDateTime" name="appointmentDateTime">
+        <button type="submit">Confirm Appointment</button>
+    </form><br>
+    <!-- Change the onclick attribute to call redirectToViewAppointment function -->
+    <button onclick="redirectToViewAppointment()">View Appointment</button>
+
+    <script src="appointment.js"></script>
+</body>
+</html>

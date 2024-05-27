@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Availability Management</title>
+    <link rel="stylesheet" href="doctorAvailability.css">
+</head>
+<body>
+    <h1>Doctor Availability Management</h1>
+
+    <label for="doctorId">Select Doctor:</label>
+    <select id="doctorId"></select>
+
+    <label for="availabilityDateTime">Select Availability:</label>
+    <input type="datetime-local" id="availabilityDateTime" required>
+
+    <label for="isAvailable">Is Available:</label>
+    <input type="checkbox" id="isAvailable">
+
+    <button id="submitButton" onclick="handleSubmit()">Add Availability</button>
+
+    <input type="hidden" id="updateDoctorId">
+    <input type="hidden" id="updateAvailabilityDateTime">
+
+    <h2>Doctor Availability Details</h2>
+    <table id="availabilityTable" border="1">
+        <thead>
+            <tr>
+                <th>Doctor ID</th>
+                <th>Availability Date-Time</th>
+                <th>Is Available</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="doctorAvailability.js"></script>
+</body>
+</html>
